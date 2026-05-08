@@ -1,332 +1,223 @@
-# NeuroGenius X v4 — Reflective Cognitive Studio
+# Reflect Cognitive Studio
 
-NeuroGenius X v4 is a single-file, browser-based cognitive studio that demonstrates local AI-assistant concepts without requiring a backend or API key. It combines a chat interface, adaptive modes, simulated cognitive metrics, local memory, knowledge-vault retrieval, reflection logs, evidence-gap tracking, trajectory learning, goals, export/import, voice controls, and animated neural visualizations.
+**Reflect Cognitive Studio** is an experimental, browser-based cognitive AI interface built as a collection of single-file HTML prototypes. It explores local-first assistant design, simulated reasoning systems, adaptive memory, evidence tracking, reflective logs, research-style debate, goal planning, and transparent uncertainty tools.
 
-The project is designed as an experimental interface for exploring how future personal assistants might expose memory, uncertainty, retrieval, reflection, and user-control mechanisms in a transparent way.
+The project does **not** require a backend, account, API key, database, or build step. Open one of the HTML files in a modern browser and start experimenting.
 
 ---
 
-## Key Features
+## Overview
 
-### Conversational Modes
+Reflect Cognitive Studio is designed as a playground for testing how future personal AI tools could expose their internal behaviour to the user.
 
-NeuroGenius X includes six assistant modes:
+Instead of hiding everything behind a normal chatbot box, the studio shows systems such as:
 
-* **Standard** — balanced, general-purpose responses.
-* **Creative** — invention, analogies, remixing, and futuristic ideas.
-* **Analytical** — structured reasoning, trade-offs, risks, and step-by-step breakdowns.
-* **Empathetic** — supportive, tone-aware responses.
-* **Research** — separates claims, evidence, uncertainty, and verification needs.
-* **Builder** — implementation-focused planning, checklists, and prototype guidance.
+- Local memory
+- Knowledge vault retrieval
+- Evidence-gap tracking
+- Reflection logs
+- Goal planning
+- Agent-style routing
+- Simulated reasoning traces
+- Cognitive metrics
+- Adaptive response controls
+- Import/export tools
+- Experimental research-inspired AI interface ideas
 
-Modes can be selected from the top chat toolbar or changed with commands such as:
+It is best understood as a **local AI-assistant simulation and interface research lab**, not as a real cloud LLM.
+
+---
+
+## Main Builds
+
+The repository contains multiple experimental versions:
+
+| File | Purpose |
+| --- | --- |
+| `Ultra - new version.html` | Flagship NeuroGenius X v4 reflective cognitive studio with memory, vault, goals, reflection, evidence gaps, voice tools, checker traces, and neural visualisation. |
+| `Research Lab.html` | Research-heavy experimental lab with multi-agent routing, graph memory, uncertainty tracking, evidence auditing, debate/auditor modes, counterfactual concepts, and live analytics. |
+| `max.html` | NeuroAdaptive Chat Lab v7 focused on associative memory graphs, contextual bandit-style controls, critic scoring, memory consolidation, debug traces, and evaluation tools. |
+| `low.html` | Lightweight/no-CSP safe build that runs with fewer external dependencies and upgrades when optional libraries are available. |
+
+---
+
+## Features
+
+### Local-first cognitive studio
+
+Reflect Cognitive Studio runs in the browser and stores state locally. It is designed for experimentation without requiring a server.
+
+Core local systems include:
+
+- Browser-local memory
+- Local conversation state
+- Import/export of saved state
+- Reset tools
+- Privacy-first persistence
+- Optional fallback behaviour when external libraries are unavailable
+
+---
+
+### Multiple assistant modes
+
+The studio includes several interaction styles, depending on the build:
+
+- Standard
+- Creative
+- Analytical
+- Empathetic
+- Research
+- Builder
+- Adaptive Router
+- Agentic Research
+- Debate + Auditor
+- Math / Symbolic
+- Creative Divergence
+- Memory Recall
+
+These modes are used to simulate different assistant behaviours such as planning, brainstorming, analysis, emotional support, research separation, and implementation guidance.
+
+---
+
+### Memory and retrieval
+
+The project experiments with different memory ideas:
+
+- Long-term browser memory
+- Associative memory graphs
+- Episodic memory
+- Memory pruning
+- Memory retention controls
+- Memory hit scoring
+- Knowledge Vault notes
+- Local retrieval simulation
+- Context chips
+- Import/export of memory state
+
+The aim is to make memory visible, adjustable, and inspectable instead of hidden.
+
+---
+
+### Knowledge Vault
+
+The Knowledge Vault lets users add local notes, requirements, facts, research snippets, or project constraints.
+
+Possible uses:
+
+- Store project notes
+- Add design requirements
+- Keep research notes
+- Save feature ideas
+- Provide source material for answers
+- Test retrieval-style assistant behaviour locally
+
+---
+
+### Evidence-gap tracking
+
+The studio can simulate detection of missing information, uncertainty, or prompts that may require external verification.
+
+It can flag issues such as:
+
+- Time-sensitive questions
+- Unsupported claims
+- Missing evidence
+- Unclear requirements
+- Low confidence
+- Lack of relevant memory or vault context
+
+This helps explore transparent AI systems that show what they do not know.
+
+---
+
+### Reflection and metacognition
+
+Reflect Cognitive Studio includes reflection-style features such as:
+
+- Reflection logs
+- Metacognitive summaries
+- Micro-lessons
+- Trajectory learning
+- Conversation direction tracking
+- Suggested next steps
+- Recent topic awareness
+
+These systems simulate an assistant that can review its own interaction patterns and improve future responses.
+
+---
+
+### Goal planning
+
+Several builds include local goal and planning tools.
+
+You can use them to:
+
+- Create project goals
+- Break ideas into checklists
+- Track progress
+- Generate plans from prompts
+- Convert requests into action steps
+
+Example prompt:
 
 ```text
-/mode creative
-/mode analytical
-/mode research
-/mode builder
+plan: build a research assistant dashboard
 ```
 
 ---
 
-## Local Memory System
+### Experimental research-inspired systems
 
-The app includes a browser-local memory system. You can save facts by typing messages such as:
+The more advanced builds explore ideas such as:
 
-```text
-remember that I prefer detailed code examples
-remember that this project should stay single-file
-```
+- Multi-agent routing
+- Debate and auditor loops
+- Graph memory
+- Evidence auditing
+- Counterfactual worlds
+- Dream rehearsal
+- Ablation testing
+- Prompt-genome evolution
+- Curiosity-driven experiment search
+- Causal hypothesis mapping
+- Uncertainty markets
+- Red-team mutation loops
+- Quality critics
+- Contextual bandit-style adaptive controls
 
-Saved memories appear in the **Long-term memory** panel and are retrieved automatically when relevant to future prompts.
-
-Memory features include:
-
-* Explicit memory capture using `remember that...`
-* Automatic lightweight memory capture for longer, topic-rich messages
-* Memory scoring based on relevance and retention
-* Ebbinghaus-style memory decay
-* Weak-memory pruning
-* Context chips generated from active topics and useful memories
-
-All memories are stored in the browser using `localStorage`.
-
----
-
-## Knowledge Vault
-
-The **Knowledge Vault** lets you paste project notes, requirements, source text, or facts into a local retrieval area.
-
-Use cases:
-
-* Store project requirements
-* Paste research notes
-* Add feature plans
-* Keep design constraints
-* Provide source material for future responses
-
-The assistant retrieves relevant vault notes when answering and displays them as evidence pills under the response.
-
-Example vault note:
-
-```text
-The app must remain a single HTML file, keep all existing features, and work offline except for optional CDN libraries.
-```
+These are implemented as local simulations and interface experiments.
 
 ---
 
-## Evidence Gap Tracker
+### Visual dashboards
 
-The **Evidence Gap Tracker** detects when a prompt may need missing information or external verification.
+The project includes visual and diagnostic panels such as:
 
-It can flag gaps such as:
-
-* Time-sensitive information
-* Current facts, prices, laws, schedules, or news
-* Missing decision criteria
-* Low user confidence
-* No supporting local memory or vault evidence
-
-This helps the app show where uncertainty comes from instead of only giving a single confidence number.
-
----
-
-## Trajectory Learnings
-
-Trajectory learnings are small strategy notes distilled from recent interaction patterns.
-
-The system can learn patterns such as:
-
-* When errors appear, isolate the failing feature and preserve working behavior.
-* For innovation requests, convert research ideas into visible interface features.
-* For documentation requests, explain feature value before setup and usage.
-
-You can manually generate them with the **Distill** button, or they are generated automatically every few turns.
+- Cognitive module cards
+- Simulated intelligence/confidence metrics
+- Memory usage
+- Context depth
+- Learning rate
+- Neural pathways
+- Capacity radar
+- Live diagnostics
+- Debug logs
+- Decision traces
+- Event streams
+- Built-in test panels
 
 ---
 
-## Reflection Log
+### Voice and speech
 
-The **Reflection Log** summarizes recent conversation direction and suggests next moves.
+Where supported by the browser, some builds include:
 
-It tracks:
+- Voice input
+- Speak last response
+- Speech synthesis
+- Browser-native speech features
 
-* Recent topics
-* User/assistant turn balance
-* Suggested next actions
-* Current focus areas
-
-Click **Reflect now** to generate a reflection manually.
-
----
-
-## Goals System
-
-NeuroGenius X includes a simple local goal tracker.
-
-You can create goals by:
-
-* Clicking **+ Goal**
-* Asking for a plan with `plan:`
-
-Example:
-
-```text
-plan: build a study dashboard
-```
-
-The app will create a checklist in the Goals panel.
-
----
-
-## Response Controls
-
-The **Response Controls** panel lets you tune how the assistant responds.
-
-Controls include:
-
-* **Depth** — how detailed the answer should be.
-* **Novelty** — how experimental or creative the answer should be.
-* **Transparency** — how much trace/checker information to show.
-* **Your confidence** — lets the assistant adapt explanations based on how confident you feel.
-
-The **Defaults** button resets these controls.
-
----
-
-## Checker Trace and Uncertainty Notes
-
-When transparency is enabled, answers include a collapsible checker trace.
-
-The trace usually includes:
-
-* **Router** — whether the app used memory/vault retrieval.
-* **Analyzer** — detected topic, domain, and complexity.
-* **Retriever** — number of memories, vault notes, and trajectory learnings found.
-* **Generator** — active mode and control settings.
-* **Checker** — confidence and uncertainty notes.
-
-For time-sensitive prompts, the app warns that it cannot verify live information by itself.
-
----
-
-## Neural Dashboard
-
-The left dashboard visualizes simulated cognitive capacity:
-
-* Knowledge Matrix
-* Creativity Engine
-* Problem Solving
-* Communication
-* Intelligence score
-* Confidence score
-* Context depth
-* Learning rate
-* Memory usage
-
-The values change as you interact with the assistant.
-
----
-
-## Visualizations
-
-NeuroGenius X includes two visual systems:
-
-### Neural Pathways
-
-An animated canvas graph showing simulated connections between cognitive modules.
-
-### Capacity Radar
-
-A radar chart powered by Chart.js when available. If Chart.js fails to load, the app falls back to a built-in bar-style visualization.
-
----
-
-## Voice and Speech
-
-The app supports browser-based voice features when available:
-
-* **Voice input** using the Web Speech Recognition API
-* **Speak last answer** using browser speech synthesis
-
-Browser support may vary. Chrome-based browsers usually provide the best support.
-
----
-
-## Commands
-
-Available commands:
-
-```text
-/help
-```
-
-Shows a usage guide.
-
-```text
-/mode creative
-/mode analytical
-/mode empathetic
-/mode research
-/mode builder
-/mode standard
-```
-
-Switches assistant mode.
-
-```text
-/memory
-```
-
-Shows saved local memories.
-
-```text
-/vault
-```
-
-Shows saved Knowledge Vault notes.
-
-```text
-/export
-```
-
-Exports the current brain state as JSON.
-
-```text
-/clear
-```
-
-Resets the local app state.
-
----
-
-## Export and Import
-
-Use **Export brain** to download a JSON file containing:
-
-* Conversation history
-* Memories
-* Vault notes
-* Reflections
-* Evidence gaps
-* Trajectory learnings
-* Goals
-* Settings
-* Cognitive metrics
-
-Use **Import** to restore a previous export.
-
-The export version is currently:
-
-```text
-4.0.0
-```
-
----
-
-## Privacy
-
-NeuroGenius X v4 is privacy-first by design.
-
-The app stores data locally in the browser using:
-
-```text
-localStorage
-```
-
-It does not send chat content to a server. It does not require an account, API key, or backend.
-
-Optional CDN libraries are loaded for enhanced features, but the app includes fallbacks if they fail.
-
-Stored browser data includes:
-
-* Memory items
-* Vault notes
-* Goals
-* Conversation history
-* Reflections
-* Evidence gaps
-* Trajectory learnings
-* Settings
-
-To erase local data, click **Reset System** or use:
-
-```text
-/clear
-```
-
----
-
-## Optional External Libraries
-
-The app attempts to load these optional libraries:
-
-* **Chart.js** — radar chart visualization
-* **Math.js** — safe arithmetic expression evaluation
-* **Compromise NLP** — topic, noun, and entity extraction
-
-If a library does not load, NeuroGenius X continues using built-in fallback logic.
+Browser support may vary. Chromium-based browsers usually work best for speech recognition.
 
 ---
 
@@ -334,17 +225,22 @@ If a library does not load, NeuroGenius X continues using built-in fallback logi
 
 ### Option 1: Open directly
 
-Save the file as:
+Download or clone the repository, then open one of the HTML files in your browser:
 
 ```text
-index.html
+Ultra - new version.html
+Research Lab.html
+max.html
+low.html
 ```
 
-Then open it in a modern browser.
+No installation is required.
+
+---
 
 ### Option 2: Run with a local server
 
-Some browsers apply stricter rules when opening files directly. A local server is recommended for best results.
+Some browser features behave better when served from a local server.
 
 Using Python:
 
@@ -352,199 +248,251 @@ Using Python:
 python -m http.server 8000
 ```
 
-Then visit:
+Then open:
 
 ```text
 http://localhost:8000
 ```
 
----
-
-## Browser Compatibility
-
-Recommended:
-
-* Chrome
-* Edge
-* Brave
-* Other modern Chromium-based browsers
-
-Also works in many recent versions of Firefox and Safari, though voice recognition support may vary.
+Choose one of the HTML files from the directory listing.
 
 ---
 
-## Project Structure
+## Recommended Starting Point
 
-NeuroGenius X v4 is intentionally built as a single HTML file:
+For the most complete experience, start with:
 
 ```text
-index.html
+Ultra - new version.html
 ```
 
-Inside that file:
+Use:
 
 ```text
-<head>
-  CSP policy
-  optional CDN libraries
-  CSS design system
-</head>
-
-<body>
-  dashboard UI
-  chat interface
-  cognitive laboratory
-  JavaScript app logic
-</body>
+Research Lab.html
 ```
 
-Major JavaScript systems:
+when you want the more experimental research-lab version.
 
-* State loading and saving
-* NLP processing
-* Mode routing
-* Response generation
-* Memory capture and retrieval
-* Vault retrieval
-* Evidence-gap tracking
-* Trajectory-learning distillation
-* Reflection generation
-* Goal management
-* Chart rendering
-* Canvas neural animation
-* Export/import
-* Voice input
-* Speech output
+Use:
 
----
+```text
+max.html
+```
 
-## Security Notes
+when testing adaptive memory, reward, critic, and debug systems.
 
-The app includes a Content Security Policy to reduce unsafe behavior.
+Use:
 
-It avoids rendering user chat as raw HTML. Messages are inserted using text nodes and controlled DOM creation.
+```text
+low.html
+```
 
-Arithmetic evaluation is restricted to simple mathematical characters before Math.js is used.
+when you want the lightweight fallback version.
 
 ---
 
-## Limitations
+## Example Commands and Prompts
 
-NeuroGenius X v4 is an experimental local simulation, not a real cloud AI model.
-
-Current limitations:
-
-* It cannot browse the web.
-* It cannot verify live facts by itself.
-* Its reasoning is rule-based and simulated.
-* Its memory is local to the browser and device.
-* Clearing browser storage will remove saved state unless exported first.
-* Voice features depend on browser support.
-* Optional CDN libraries may be blocked by privacy extensions, offline use, or CSP/network restrictions.
-
-For current facts, news, prices, legal rules, medical details, financial decisions, or safety-critical information, verify with trusted external sources.
-
----
-
-## Example Prompts
-
-Try:
+Try prompts like:
 
 ```text
 /help
 ```
 
 ```text
-remember that I like advanced single-file HTML apps
+/mode creative
 ```
 
 ```text
-plan: improve this app into a research assistant
+/mode research
 ```
 
 ```text
-brainstorm novel features for a cognitive studio
+remember that this project should stay single-file
 ```
 
 ```text
-compare local memory versus cloud memory
-```
-
-```text
-summarize our current project direction
-```
-
-```text
-24*(3+7)
+plan: improve this into a transparent research assistant
 ```
 
 ```text
 Use my vault notes to make a feature checklist
 ```
 
+```text
+Brainstorm novel cognitive-studio features
+```
+
+```text
+Compare local memory and cloud memory
+```
+
+```text
+Run an evidence audit on this idea
+```
+
 ---
 
-## Suggested Roadmap
+## Privacy
+
+Reflect Cognitive Studio is built around local-first experimentation.
+
+The project is designed so that:
+
+- No backend is required
+- No account is required
+- No API key is required
+- State can be stored in the browser
+- Memory and vault data can be reset
+- Brain/state exports can be saved manually
+- Some optional CDN libraries may be loaded depending on the build
+
+Important: because state is browser-local, clearing browser storage may remove saved memories, goals, logs, and vault notes unless exported first.
+
+---
+
+## Limitations
+
+Reflect Cognitive Studio is an experimental prototype.
+
+Current limitations:
+
+- It is not a real LLM.
+- It does not truly understand text like a cloud AI model.
+- Many cognitive systems are simulated.
+- It cannot verify live facts by itself.
+- It cannot browse the web.
+- Local memory is device/browser-specific.
+- Voice features depend on browser support.
+- Optional libraries may fail if blocked by browser settings, extensions, CSP rules, or network issues.
+- It should not be used for medical, legal, financial, safety-critical, or emergency decisions.
+
+For factual, current, legal, medical, financial, or safety-sensitive topics, verify information with trusted external sources.
+
+---
+
+## Project Structure
+
+```text
+Reflect-Cognitive-Studio/
+├── CODE_OF_CONDUCT.md
+├── LICENSE
+├── README.md
+├── SECURITY.md
+├── Research Lab.html
+├── Ultra - new version.html
+├── low.html
+└── max.html
+```
+
+---
+
+## Technology
+
+The project is mainly built with:
+
+- HTML
+- CSS
+- JavaScript
+- Browser APIs
+- Local storage
+- Canvas-based visualisation
+- Optional browser speech APIs
+- Optional external frontend libraries depending on the build
+
+No package manager or build tool is required.
+
+---
+
+## Browser Compatibility
+
+Recommended browsers:
+
+- Chrome
+- Edge
+- Brave
+- Other modern Chromium-based browsers
+
+Firefox and Safari may work for many features, but some voice or experimental browser APIs may behave differently.
+
+---
+
+## Security Notes
+
+This project is a client-side prototype. When developing or modifying it:
+
+- Avoid rendering user input as raw HTML.
+- Keep local-storage data resettable.
+- Be careful with imported state files.
+- Treat exported brain/state files as potentially sensitive.
+- Review any CDN scripts before production use.
+- Do not enter secrets, passwords, private keys, or sensitive personal data into experimental builds.
+
+See `SECURITY.md` for the repository security policy.
+
+---
+
+## Roadmap Ideas
 
 Possible future upgrades:
 
-* Assumption ledger for tracking hidden assumptions
-* Self-debate snapshots with proposer, skeptic, and arbiter roles
-* Memory contradiction detection
-* Memory confidence and evidence-quality scores
-* Searchable transcript timeline
-* Markdown export
-* Theme editor
-* Offline service worker support
-* Plugin-style feature modules
-* Better accessibility preferences
-* More advanced local summarization
-* User-editable memory cards
-* Visual memory graph
-* Drag-and-drop vault import
-* Project workspaces
+- Rename the flagship build to `index.html`
+- Add GitHub Pages deployment
+- Add screenshots/GIF demo
+- Add a proper version table
+- Add service worker offline mode
+- Add workspace/project tabs
+- Add searchable transcript history
+- Add memory editing UI
+- Add memory contradiction detection
+- Add visual memory graph
+- Add markdown export
+- Add theme editor
+- Add accessibility preferences
+- Add drag-and-drop vault import
+- Add plugin-style modules
+- Add real test suite
+- Add benchmark/evaluation page
+- Split large builds into modular files while keeping single-file releases
 
 ---
 
-## Development Philosophy
+## Contributing
 
-NeuroGenius X v4 follows these principles:
+Contributions are welcome.
 
-1. **Keep existing features working.**
-2. **Turn placeholders into real interactions.**
-3. **Expose uncertainty instead of hiding it.**
-4. **Store personal data locally by default.**
-5. **Prefer visible, inspectable systems over invisible magic.**
-6. **Make complex assistant behavior understandable through UI.**
-7. **Support experimentation without requiring a backend.**
+Good contribution areas include:
+
+- UI improvements
+- Accessibility fixes
+- Better documentation
+- Bug fixes
+- Browser compatibility improvements
+- Safer local-state handling
+- More useful test cases
+- New experimental cognitive-interface ideas
+
+Suggested workflow:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Test in a modern browser.
+5. Open a pull request with a clear explanation.
 
 ---
 
 ## License
 
-Choose a license before publishing. Suggested options:
+This project is licensed under the MIT License.
 
-* MIT License for open, permissive reuse
-* Apache-2.0 for permissive reuse with patent language
-* GPL-3.0 if derivatives should remain open source
-
-Example placeholder:
-
-```text
-MIT License — add full license text before distribution.
-```
+See `LICENSE` for details.
 
 ---
 
 ## Credits
 
-Built as an experimental single-file browser app exploring:
+Created by Kai Piper.
 
-* Local-first AI interfaces
-* Reflective memory
-* Retrieval-augmented interaction
-* Transparent uncertainty
-* Cognitive dashboards
-* Human-controlled assistant behavior
-
-NeuroGenius X v4 is intended for learning, prototyping, experimentation, and interface design exploration.
+Reflect Cognitive Studio is an experimental browser-based lab for exploring transparent, local-first, research-inspired AI assistant interfaces.
